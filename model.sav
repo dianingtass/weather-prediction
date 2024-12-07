@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-import pickle
+import joblib
 
 # Baca dataset
 data = pd.read_csv("day.csv")
@@ -24,8 +24,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Simpan model ke dalam file .pkl menggunakan pickle
-with open("model.sav", "wb") as file:
-    pickle.dump(model, file)
-
-print("Model berhasil disimpan ke model.sav")
+# Simpan model
+joblib.dump(model, "model.pkl")
+print("Model berhasil disimpan ke model.pkl")
