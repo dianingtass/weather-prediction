@@ -1,13 +1,14 @@
 # Import library
 import streamlit as st
 import pandas as pd
-import pickle
+import pickle  # Menggunakan pickle untuk memuat model
 
 # Judul aplikasi
 st.title("Prediksi Penggunaan Sepeda Berdasarkan Waktu dan Cuaca")
 
-# Load model
-model = joblib.load("model.sav")
+# Load model menggunakan pickle
+with open("model.sav", "rb") as file:
+    model = pickle.load(file)
 
 # Sidebar untuk input prediksi
 st.sidebar.header("Input Data untuk Prediksi")

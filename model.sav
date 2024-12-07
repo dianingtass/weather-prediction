@@ -24,6 +24,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Simpan model ke dalam format .sav
-joblib.dump(model, "model.sav")
+# Simpan model ke dalam file .pkl menggunakan pickle
+with open("model.sav", "wb") as file:
+    pickle.dump(model, file)
+
 print("Model berhasil disimpan ke model.sav")
