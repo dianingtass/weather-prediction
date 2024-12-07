@@ -5,11 +5,13 @@ import pickle
 
 # Judul aplikasi
 st.title("Prediksi Penggunaan Sepeda Berdasarkan Waktu dan Cuaca")
+
 # Load model dengan benar
 def load_model():
     with open("model/model.pkl", "rb") as file:  # Buka file dalam mode baca biner
         return pickle.load(file)
 
+# Panggil fungsi load_model dan simpan model di variabel global
 model = load_model()
 
 # Sidebar untuk input prediksi
