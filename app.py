@@ -13,7 +13,7 @@ def load_model():
         return model
 
 # Panggil fungsi load_model dan simpan model di variabel global
-model = load_model()
+
 
 # Sidebar untuk input prediksi
 st.sidebar.header("Input Data untuk Prediksi")
