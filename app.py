@@ -7,7 +7,7 @@ import pickle
 st.title("Prediksi Penggunaan Sepeda Berdasarkan Waktu dan Cuaca")
 
 # Load model
-with open("model/model.sav", "rb") as file:
+with open("model/model.pkl", "rb") as file:
     model = pickle.load(file)
 
 # Sidebar untuk input prediksi
