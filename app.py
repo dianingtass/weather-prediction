@@ -9,7 +9,8 @@ st.title("Prediksi Penggunaan Sepeda Berdasarkan Waktu dan Cuaca")
 # Load model dengan benar
 def load_model():
     with open('model/model.pkl', 'rb') as file:
-        return pickle.load(file)
+        model = pickle.load(file)
+        return model
 
 # Panggil fungsi load_model dan simpan model di variabel global
 model = load_model()
