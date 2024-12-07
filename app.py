@@ -13,7 +13,7 @@ def load_model():
 
 # Sidebar untuk input prediksi
 st.sidebar.header("Input Data untuk Prediksi")
-temp = st.sidebar.slider("Suhu (0-100)", 0, 100, 50)
+temp = st.sidebar.slider("Suhu (0-100)", 0.0, 1.0, 0.5)
 hum = st.sidebar.slider("Kelembaban (0-1)", 0.0, 1.0, 0.5)
 windspeed = st.sidebar.slider("Kecepatan Angin (0-1)", 0.0, 1.0, 0.5)
 season = st.sidebar.selectbox("Musim", ["Winter", "Spring", "Summer", "Fall"])
