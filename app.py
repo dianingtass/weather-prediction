@@ -1,13 +1,14 @@
 # Import library
 import streamlit as st
 import pandas as pd
-import joblib
+import pickle
 
 # Judul aplikasi
 st.title("Prediksi Penggunaan Sepeda Berdasarkan Waktu dan Cuaca")
 
-# Load model
-model = joblib.load("model/model.pkl")
+# Load model dengan benar
+with open("model/model.pkl", "rb") as file:  # Buka file dalam mode baca biner
+    model = pickle.load(file)
 
 # Sidebar untuk input prediksi
 st.sidebar.header("Input Data untuk Prediksi")
