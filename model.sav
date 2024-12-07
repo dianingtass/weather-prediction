@@ -25,5 +25,5 @@ model = LinearRegression()
 model.fit(X_train, y_train)
 
 # Simpan model
-joblib.dump(model, "model.pkl")
-print("Model berhasil disimpan ke model.pkl")
+joblib.dump(model, "model.sav")
+print("Model berhasil disimpan ke model.sav")

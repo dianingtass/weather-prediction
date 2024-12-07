@@ -7,7 +7,7 @@ import joblib
 st.title("Prediksi Penggunaan Sepeda Berdasarkan Waktu dan Cuaca")
 
 # Load model
-model = joblib.load("model.pkl")
+model = joblib.load("model.sav")
 
 # Sidebar untuk input prediksi
 st.sidebar.header("Input Data untuk Prediksi")
